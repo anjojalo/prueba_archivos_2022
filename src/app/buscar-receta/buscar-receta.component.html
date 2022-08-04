@@ -1,0 +1,45 @@
+
+ <a href="/login"(click)="loginOut()">Cerrar sesion</a>
+<br>
+<div class="container">
+  <div class="row justify-content-md-center row-cols-auto">
+    <div class="col">
+        <input type="text" id="buscarItem" placeholder="ingresa tu plato" [(ngModel)]="miPlato">
+        <br><br>
+
+        <button type="submit" id="buscarPlato" class="btn btn-primary" (click)="buscarPlato()" >Buscar plato</button>
+        <br>
+        
+            <p>{{this.noDatosOrPlate}}</p>
+            
+      <div class="card border-dark mb-3 card text-white bg-dark mb-3" style="width: 18rem;">
+        <img src="{{imageRecipe}}" class="card-img-top" alt="imagen">
+          
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Tiempo de preparacion {{tiempoPreparacion}}</li>
+          <li class="list-group-item">HealthScore {{healthScore}}</li>
+          <li class="list-group-item">Tipo de plato {{vegetariano}}</li>
+          <li class="list-group-item">{{calculaTamanoArray()}} Cantidad de platos en menu: {{this.tamanoArray}} {{this.tamanoArray>=4?"Menu completo":""}}</li>
+        </ul>
+        <div class="card-body">
+          <button class="btn btn-primary" type="button" (click)="agregarPlatoArray()">Agregar al menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<app-menu></app-menu>
+
+
+
+
+
+
+
+
+<!-- <button type="submit" id="buscarPost" (click)="peticionPost()" >Peticion Post</button> -->
+
+
+
